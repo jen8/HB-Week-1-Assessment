@@ -1,56 +1,56 @@
-#def total_cost(state_abbreviation, cost, tax=0.05):
-    #if state_abbreviation == "CA":
-        #item_total_cost = float(cost) + (float(cost)*0.07)
-    #else:
-        #item_total_cost = float(cost) + (float(cost)*float(tax))
-    #return item_total_cost
+def total_cost(state_abbreviation, cost, tax=0.05):
+    if state_abbreviation == "CA":
+        item_total_cost = float(cost) + (float(cost)*0.07)
+    else:
+        item_total_cost = float(cost) + (float(cost)*float(tax))
+    return item_total_cost
 
-#print(total_cost("HI", 8.00))
+print(total_cost("HI", 8.00))
 
 # SPECIAL CASE TO CONSIDER: What if user enters state abbreviation in lowercase?
 # We can use .upper() method to convert that state abbreviation into uppercase
 
   
 
-#def is_berry(fruit_name):
-    #if fruit_name == "strawberry":
-        #return True
-    #elif fruit_name == "cherry":
-        #return True
-    #elif fruit_name == "blackberry":
-        #return True
-    #else:
-        #return False
+def is_berry(fruit_name):
+    if fruit_name == "strawberry":
+        return True
+    elif fruit_name == "cherry":
+        return True
+    elif fruit_name == "blackberry":
+        return True
+    else:
+        return False
 
-#print is_berry("strawberry")
-#print is_berry("cherry")
-#print is_berry("blackberry")
-#print is_berry("corgi")
+print is_berry("strawberry")
+print is_berry("cherry")
+print is_berry("blackberry")
+print is_berry("corgi")
 
 # SPECIAL CASES TO CONSIDER: 
 # Should we enter a new if/else statement to return True, if the user enters
 # "blackerry" as the fruit_name
 
-#def shipping_cost(fruit_name):
-    #if is_berry(fruit_name) == True:
-        #return 0
-    #else:
-        #return 5
-#print shipping_cost("kangaroo")
-#print shipping_cost("strawberry")
+def shipping_cost(fruit_name):
+    if is_berry(fruit_name) == True:
+        return 0
+    else:
+        return 5
+print shipping_cost("kangaroo")
+print shipping_cost("strawberry")
 
 ## SPECIAL CASES TO CONSIDER:
 ## If user enters numbers for the fruit_name
 
-#def is_home_town(town_name):
-    #if town_name == "San Francisco":
-        #return True
-    #else:
-        #return False
-#print is_home_town("San Francisco")
-#print is_home_town("New York")
+def is_home_town(town_name):
+    if town_name == "San Francisco":
+        return True
+    else:
+        return False
+print is_home_town("San Francisco")
+print is_home_town("New York")
 
-#### ADD SPECIAL CASES 
+
 
 def full_name(first_name, last_name):
     entire_name = first_name + " " + last_name 
@@ -60,40 +60,28 @@ print full_name("Suzanne","Sommers")
 print full_name("Martha", "Stewart")
 
 def home_town_greeting(home_town, first_name, last_name):
-    test = foo
-    print "Hi %s where are you from?" % (test)
+    entire_name = full_name(first_name, last_name)
+    if is_home_town(home_town):
+        print "Hi %s, we're from the same place!" % (entire_name)
+    else:
+        print "Hi %s where are you from?" % (entire_name)
 
-#print home_town_greeting(San Francisco,  )
+home_town_greeting("San Francisco", "Jane", "Doe")
+home_town_greeting("Anchorage", "Bob", "Smith")
 
 ##### TO BE FINISHED !!!!!!
 
-#def increment(add(x + y), x=1):
-#print increment(x=5)
-
-#def add(x + y):
-    #pass
-
-#def append_num_to_numlist(num, numlist):
-    #numlist.append(num)
-    #return numlist
-
-#print append_num_to_numlist(5,[1,3,4,11])
+def increment(x=1):
+    def add(x,y):  
+        return x + y
+    num2 = add(5,8)
+ 
+print increment(5)
 
 
+def append_num_to_numlist(num, numlist):
+    numlist.append(num)
+    return numlist
 
-#### TO BE FINISHED !!!!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print append_num_to_numlist(5,[1,3,4,11])
 
